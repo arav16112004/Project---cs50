@@ -1,0 +1,24 @@
+{% extends "layout.html" %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block main %}
+    <form action="/input" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="essay" name="essay" placeholder="Essay (Short form in a word)" type="text">
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="promptname" name="promptname" placeholder="Prompt" type="text">
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="name" name="name" maxlength="50" placeholder="Name of university" type="text">
+        </div>
+        <label for="deadline">Deadline for Submission:</label>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="deadline" name="deadline" placeholder="Deadline For Submission" type="date">
+        </div>
+        <button class="btn btn-primary" type="submit">Enter</button>
+    </form>
+{% endblock %}

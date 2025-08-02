@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Register
+{% endblock %}
+
+{% block main %}
+<h3> Essay Planner <br>
+    Hi, My name is Arav Mehta, and I live in Mumbai, India.<br>
+     This is a web application to organize essays and other tasks
+</h3>
+
+<br>
+<h5>Register by clicking on the button on the top right or login of you already have an account</h5>
+    <form action="/login" method="post">
+        <div class="mb-3">
+            <input autocomplete="off" autofocus class="form-control mx-auto w-auto" id="username" name="username" placeholder="Username" type="text">
+        </div>
+        <div class="mb-3">
+            <input class="form-control mx-auto w-auto" id="password" name="password" placeholder="Password" type="password">
+        </div>
+        <button class="btn btn-primary" type="submit">Login</button>
+    </form>
+
+{% endblock %}

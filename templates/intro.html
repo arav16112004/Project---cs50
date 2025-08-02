@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block main %}
+
+    <h1>
+        Essay Organizer Web Application
+    </h1>
+
+<table style="width:100%" class = "center" >
+    <h4>View your tasks/Essays in the table below</h4>
+        <tr>
+          <th>Essay</th>
+          <th>Name</th>
+          <th>Prompt</th>
+          <th>Deadline</th>
+        </tr>
+
+          {% for row in db %}
+          <tr>
+            <td>{{ row.essay }}</td>
+            <td>{{ row.name }} </td>
+            <td>{{ row.promptname }}</td>
+            <td>{{ row.deadline }}</td>
+          </tr>
+          {% endfor %}
+
+      </table>
+
+{% endblock %}

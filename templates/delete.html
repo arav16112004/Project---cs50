@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+
+{% block title %}
+
+{% endblock %}
+
+{% block main %}
+<form action="/delete" method="post">
+    <div class="mb-3">
+    <label for="essay">Choose an Essay</label>
+    <select name="essay" id="essay">
+        {% for row in db %}
+    <option value= {{ row.essay }}  id = "key">{{ row.essay }}</option>
+        {% endfor %}
+    </select>
+    </div>
+
+
+    <button class="btn btn-primary" type="submit" value = "delete">Delete Task</button>
+</form>
+    {% endblock %}
